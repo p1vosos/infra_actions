@@ -61,7 +61,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull alexeypetrow/infra_action:latest
+          sudo docker pull alexeypetrow/infra_action
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 8000:8000 alexeypetrow/infra_action:latest
+          sudo docker run --rm -d -p 8000:8000 alexeypetrow/infra_action
